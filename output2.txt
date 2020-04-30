@@ -1,0 +1,28 @@
+Formula: 
+not ( P or Q )  or not ( P and not Q ) 
+
+Subformulas:
+   f_0 =  P or Q 
+   f_1 =  P and not Q 
+   f_2 =  not f_0 or not f_1 
+
+And-Or Tree:
+f_2:OR
+    f_2_0:NOT
+        f_0:OR
+            P:LEAF
+            Q:LEAF
+    f_2_0:NOT
+        f_1:AND
+            P:LEAF
+            f_1_0:NOT
+                Q:LEAF
+
+Valuation of the propositional symbols:
+  ( P, true )
+  ( R, true )
+  ( Q, false )
+  ( T, true )
+
+
+The tree evaluates to false

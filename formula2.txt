@@ -1,0 +1,5 @@
+not(P or Q) or not(P and not Q)
+P true
+R true
+Q false
+T true
